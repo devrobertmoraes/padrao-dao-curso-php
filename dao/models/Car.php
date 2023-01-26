@@ -34,7 +34,7 @@ class Car
 
     public function setKm($km)
     {
-        $this->km = $km;
+        $this->km = intval($km);
     }
 
     public function getColor()
@@ -46,10 +46,4 @@ class Car
     {
         $this->color = $color;
     }
-}
-
-interface CarDAO
-{
-    public function create(Car $car);
-    public function findAll();
 }
